@@ -25,7 +25,7 @@ with st.expander("⚙️ Options", expanded=False):
     scale = st.checkbox("Scale Numeric", value=False)
 
 if uploaded is not None:
-    df = pd.read_csv(uploaded)
+    df = pd.read_csv(uploaded,encoding="ISO-8859-1")
     st.subheader("Preview")
     st.dataframe(df.head(20))
 
